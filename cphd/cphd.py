@@ -39,7 +39,7 @@ def _add2logbook(date, dest, long_desc):
     logbook_entry = LOGBOOK / f'{date}.wiki'
     dest = dest.relative_to(LOGBOOK)
     with open(logbook_entry, 'a') as logbook:
-        logbook.write('\n{{' + f'file:{dest}|{long_desc}' + '}}\n')
+        logbook.write('\n{{' + f'local:{dest}|{long_desc}' + '}}\n')
 
 
 def _verbosity(ctx, param, count):
